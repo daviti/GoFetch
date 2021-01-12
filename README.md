@@ -23,3 +23,7 @@ start cypress  '$(npm bin)/cypress open'
 Cypress IDE will open. From there you can run your test.
 
 To run a test click on the specific test you want to run.
+
+Cypress IDE will run the test and will display if there are any issues.
+
+From here you can start debugging.
