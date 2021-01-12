@@ -1,17 +1,14 @@
+//search gofetch on google
 describe('My First Test', () => {
-  it('clicking "type" shows the right headings', () => {
-    cy.visit('https://example.cypress.io')
+    beforeEach(() => {
+    cy.visit('https://www.google.com')
+})
+    it('Gets, types and asserts - type into a DOM element', () => {
+    cy.get('.a4bIc').type('GoFetch Health: home')
+    cy.contains('.sbl1').click()
+    cy.wait(1000)
+    cy.get('.TbwUpd.NJjxre')
+    cy.contains('GoFetch Health: Home').click()
 
-    cy.pause()
-
-    cy.contains('type').click()
-
-    // Should be on a new URL which includes '/commands/actions'
-    cy.url().should('include', '/commands/actions')
-
-    // Get an input, type into it and verify that the value has been updated
-    cy.get('.action-email')
-      .type('fake@email.com')
-      .should('have.value', 'fake@email.com')
   })
 })
